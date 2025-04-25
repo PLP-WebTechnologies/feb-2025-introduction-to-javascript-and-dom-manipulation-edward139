@@ -1,0 +1,77 @@
+# Introduction to JavaScript and DOM Manipulation
+
+## Objectives
+
+Write basic JavaScript functions.
+Manipulate the DOM dynamically.
+Respond to user interactions.
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>DOM Interaction Example</title>
+  <style>
+    body {
+      font-family: Arial;
+      padding: 20px;
+    }
+    #output {
+      margin-top: 20px;
+      font-size: 1.5em;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Say Something:</h1>
+  <input type="text" id="textInput" placeholder="Type something..." />
+  <button id="updateBtn">Update Text</button>
+  <button id="colorBtn">Change Background</button>
+
+  <div id="output">Your text will appear here.</div>
+
+  <script>
+    // Function to update text in the div
+    function updateText() {
+      const input = document.getElementById('textInput').value;
+      const output = document.getElementById('output');
+      output.textContent = input || "Your text will appear here.";
+    }
+
+    // Function to change background color
+    function changeBackground() {
+      const colors = ['lightblue', 'lightgreen', 'lightpink', 'lavender', 'white'];
+      const randomColor = colors[Math.floor(Math.random() * colors.length)];
+      document.body.style.backgroundColor = randomColor;
+    }
+
+    // Add event listeners
+    document.getElementById('updateBtn').addEventListener('click', updateText);
+    document.getElementById('colorBtn').addEventListener('click', changeBackground);
+
+    // Optional: Update text live as you type
+    document.getElementById('textInput').addEventListener('input', updateText);
+  </script>
+
+</body>
+</html>
+
+
+## Instructions
+
+- Create a script.js file and link it to a HTML.
+- Structure the document using DOCTYPE, html, head, and body.
+
+>[!NOTE]
+>  - Write JavaScript that:
+>  - Changes text content dynamically.
+>  - Modifies CSS styles via JavaScript.
+>  - Adds or removes an element when a button is clicked.
+
+
+# Tasks
+- Create a well-structured HTML5 document.
+- Use at least 5 different HTML elements.
+- Ensure semantic correctness.
+
+Happy Coding! 💻✨
